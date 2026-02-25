@@ -1,0 +1,23 @@
+{
+  "articleStyle": 2,
+  "enableJs": true,
+  "enabled": true,
+  "header": "{\n  \"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36\"\n}",
+  "loginUi": "[\n  { \"name\": \"----------切换内容类型 刷新分类----------\", \"type\": \"button\" },\n  { \"name\": \"🖼️ 图片\", \"type\": \"button\", \"action\": \"switchType(1)\"},\n  { \"name\": \"🎞️ 动图\", \"type\": \"button\", \"action\": \"switchType(2)\"}\n]",
+  "loginUrl": "function switchType(n){\n  var types = ['图片', '动图'];\n  var paths = ['photos', 'gifs'];\n  java.put('contentType', n);\n  java.put('contentPath', paths[n-1]);\n  java.longToast('🔞 切换到: ' + types[n-1]);\n}",
+  "ruleArticles": ".item",
+  "ruleTitle": "strong.title@text",
+  "ruleLink": "a@href",
+  "ruleImage": "img@data-jpg,img@src",
+  "ruleNextPage": ".pagination a.next@href",
+  "ruleContent": "@js:\nvar type = java.get('contentType') || '1';\nvar img_list=\"\";\nif(type == '1') {\n  data=java.getElements('.photo-list img, .photos-list img, .list-photos img');\n} else {\n  data=java.getElements('.gif-list img, .gifs-list img');\n}\nfor(i in data){\n  var url=data[i].attr('src') || data[i].attr('data-src');\n  if(url){\n    img_list+=`<img src=\"${url}\"/>\\n`;\n  }\n}\nresult=`<html>\\n<head>\\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no\">\\n<title>${title}</title>\\n</head>\\n<body>\\n<h3>${title}</h3>\\n<div class=\"img_container\">\\n${img_list}</div>\\n</body>\\n</html>`;",
+  "searchUrl": "@js:\nvar type = java.get('contentType') || '1';\nvar path = java.get('contentPath') || 'photos';\nresult = '/' + path + '/search/?q={{key}}';",
+  "sortUrl": "@js:\nvar type = java.get('contentType') || '1';\nvar baseUrl = 'https://cn.xgroovy.com';\nvar sortList = '';\n\nif(type == '1') {\n  sortList = '搜索::' + baseUrl + '/photos/search/?q={{source.getVariable()}}\\n';\n  sortList += '最新图片::' + baseUrl + '/photos/\\n';\n  sortList += 'AI图片::' + baseUrl + '/photos/categories/ai/\\n';\n  sortList += '热门图片::' + baseUrl + '/photos/trending/\\n';\n} else {\n  sortList = '搜索::' + baseUrl + '/gifs/search/?q={{source.getVariable()}}\\n';\n  sortList += '最新动图::' + baseUrl + '/gifs/\\n';\n  sortList += '热门动图::' + baseUrl + '/gifs/trending/\\n';\n}\n\nresult = sortList;",
+  "sourceComment": "XGROOVY 图片/动图订阅源\\n支持图片、动图两种模式\\n\\n使用方法：\\n1. 点击登录按钮\\n2. 选择内容类型（图片/动图）\\n3. 刷新分类列表\\n\\n网站：https://cn.xgroovy.com/",
+  "sourceGroup": "图片",
+  "sourceIcon": "https://cn.xgroovy.com/favicon.ico",
+  "sourceName": "XGROOVY",
+  "sourceUrl": "https://cn.xgroovy.com/photos/",
+  "style": "h3{text-align:center}\nimg{width:100%}",
+  "type": 0
+}
