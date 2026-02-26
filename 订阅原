@@ -6,7 +6,7 @@
   "enabledCookieJar": false,
   "header": "{\"User-Agent\": \"Mozilla/5.0 (Linux; Android 13; 2211133C Build/TKQ1.220905.001) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36\"}",
   "loadWithBaseUrl": true,
-  "ruleArticles": ".thread-list@li@a",
+  "ruleArticles": ".thread-list@li.l-m1@a",
   "ruleTitle": "a@text",
   "ruleLink": "a@href",
   "ruleImage": "",
@@ -19,7 +19,7 @@
   "sourceUrl": "https://www.cool18.com/bbs/",
   "searchUrl": "/index.php?action=search&act=threadsearch&app=forum&keywords={{source.getVariable()}}",
   "sortUrl": "性趣贴图::/bbs/index.php\n私房自拍::/bbs6/index.php\n性感地带::/site/index.php?act=bbs&bbsid=1106\n卡通福利::/site/index.php?act=bbs&bbsid=1111",
-  "sourceComment": "cool18 成人论坛\n性趣贴图/私房自拍/性感地带/卡通福利",
+  "sourceComment": "cool18 成人论坛",
   "style": "h3{text-align:center}\nimg{width:100%}",
   "type": 0
 }
