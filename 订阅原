@@ -15,13 +15,13 @@
   "rulePubDate": "span@text",
   "ruleTitle": "a@title||a@text",
   "singleUrl": false,
-  "sortUrl": "最新::https://w3ww.enpeta.com/e/action/ListInfo/?classid=1&page={{page}}\n首页::https://w3ww.enpeta.com/\n搜索::https://w3ww.enpeta.com/e/search/index.php?page={{page}}&keyboard={{java.isEmpty(source.getVariable())?'美女':source.getVariable()}}&show=title,newstext",
+  "sortUrl": "最新::https://w3ww.enpeta.com/e/action/ListInfo/?classid=1&page={{page}}\n首页::https://w3ww.enpeta.com/\n搜索::https://w3ww.enpeta.com/e/search/index.php?page={{page}}&keyboard={{source.getVariable()}}&show=title,newstext",
   "searchUrl": "/e/search/index.php?keyboard={{key}}&show=title,newstext",
   "sourceComment": "性趣套图订阅源\n作者：AI助手 制作于2026.2.27\n\n功能特性：\n✅ 精美的渐变UI设计\n✅ 图片查看器（支持缩放/旋转）\n✅ 返回顶部按钮\n✅ 实时加载进度提示\n✅ 移动端完美适配\n\n使用说明：\n1. 支持搜索功能（在变量中输入关键词）\n2. 点击图片可全屏查看并操作\n3. 滚动超过300px显示返回顶部按钮\n\n注意事项：\n⚠️ 本源为成人内容，请谨慎使用\n⚠️ 网站可能需要特定网络环境访问",
   "sourceGroup": "18+",
   "sourceIcon": "https://w3ww.enpeta.com/favicon.ico",
   "sourceName": "🔞性趣套图",
   "sourceUrl": "https://w3ww.enpeta.com/##AI助手制作",
-  "variableComment": "💡 搜索提示：在此输入关键词进行搜索\\n例如：美女、黑丝、制服等\\n⚠️ 如果不设置，默认搜索\\\"美女\\\"",
+  "variableComment": "💡 搜索提示：在此输入关键词进行搜索\\n例如：美女、黑丝、制服等",
   "type": 0
 }
